@@ -8,6 +8,32 @@
 #include "layer_normalization.h"
 #include <vector>
 
+// transformer_model.h
+
+class TransformerBlock {
+public:
+    // Constructor
+    //TransformerBlock(size_t embed_dim, size_t num_heads, size_t hidden_dim);
+
+    // Forward pass
+    Matrix forward(const Matrix &input);
+
+    // Backward pass
+    Matrix backward(const Matrix &input, const Matrix &grad_output);
+
+private:
+    // Internal layers
+    MultiHeadAttention attention_layer;
+    FeedForward feedforward_layer;
+    LayerNorm norm1;
+    LayerNorm norm2;
+
+    // Dimensions
+    size_t embed_dim;
+    size_t num_heads;
+    size_t hidden_dim;
+};
+
 class Transformer {
 public:
     TransformerBlock(size_t vocab_size, size_t embed_dim, size_t num_heads, size_t hidden_dim, size_t num_layers);
