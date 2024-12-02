@@ -1,0 +1,46 @@
+# Ignore Python bytecode
+__pycache__/
+*.pyc
+
+# Ignore environment files
+.env
+
+# Ignore log files
+*.log
+
+# Ignore node_modules for JavaScript projects
+node_modules/
+
+# Ignore system files
+
+# Compiled object files
+*.o
+
+# Compiled executables
+run_tests
+transformer_program
+test_atomic_operations
+test_transformer_components
+# Add other executable names here
+
+# Backup files
+*~
+
+# Temporary files
+*.tmp
+*.log
+
+# Directory to ignore
+obs/
+
+# Other build artifacts
+*.out
+*.exe
+*.obj
+
+# MacOS specific files
+.DS_Store
+
+# Editor-specific files
+.idea/
+.vscode/
