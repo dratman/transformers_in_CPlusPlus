@@ -2,7 +2,7 @@
 #include <cmath>
 
 // Compute positional encodings
-Matrix positional_encoding(size_t seq_len, size_t d_model) {
+PositionalEncoding positional_encoding(size_t seq_len, size_t d_model) {
     Matrix enc(seq_len, d_model);
     for (size_t pos = 0; pos < seq_len; ++pos) {
         for (size_t i = 0; i < d_model; ++i) {

@@ -6,7 +6,7 @@
 void test_positional_encoding_forward() {
     size_t embed_dim = 4;
     size_t seq_length = 2;
-    PositionalEncoding pos_enc(embed_dim);
+    PositionalEncoding positional_encoding(embed_dim);
 
     Matrix input(seq_length, embed_dim);
     input.data = {{1.0f, 2.0f, 3.0f, 4.0f},

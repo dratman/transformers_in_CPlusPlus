@@ -27,7 +27,7 @@ void test_softmax() {
     Matrix expected(1, 3);
     float sum_exp = std::exp(1) + std::exp(2) + std::exp(3);
     expected.data = {
-        {std::exp(1) / sum_exp, std::exp(2) / sum_exp, std::exp(3) / sum_exp}};
+        {static_cast<float>(std::exp(1)) / sum_exp, static_cast<float>(std::exp(2) / sum_exp), static_cast<float>(std::exp(3) / sum_exp)}};
 
     Matrix output = softmax(input);
 
