@@ -6,13 +6,13 @@
 void test_positional_encoding_forward() {
     size_t embed_dim = 4;
     size_t seq_length = 2;
-    PositionalEncoding positional_encoding(embed_dim);
+//    positional_encoding positional_encoding(embed_dim);
 
-    Matrix input(seq_length, embed_dim);
+    positional_encoding input(seq_length, embed_dim);
     input.data = {{1.0f, 2.0f, 3.0f, 4.0f},
                   {5.0f, 6.0f, 7.0f, 8.0f}};
 
-    Matrix output = pos_enc.forward(input);
+    positional_encoding output = positional_encoding.forward(input);
 
     // Since the positional encoding values are based on sinusoids, we can check
     // if the output is the sum of input and positional encodings.
